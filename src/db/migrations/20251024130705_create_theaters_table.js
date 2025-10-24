@@ -10,6 +10,8 @@ exports.up = function (knex) {
     table.string("city").notNullable();
     table.string("state", 2).notNullable();
     table.string("zip", 10).notNullable();
+    table.string("created_at").defaultTo(knex.fn.now());
+    table.string("updated_at").defaultTo(knex.fn.now());
   });
 };
 

@@ -2,7 +2,8 @@ exports.up = function (knex) {
   return knex.schema.createTable("movies_theaters", (table) => {
     table.increments("movies_theaters_id").primary();
     table.boolean("is_showing").defaultTo(true);
-    table.timestamps(true, true);
+    table.string("created_at").defaultTo(knex.fn.now());
+    table.string("updated_at").defaultTo(knex.fn.now());
 
     table
       .integer("movie_id")

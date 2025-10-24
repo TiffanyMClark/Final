@@ -73,3 +73,9 @@ npx knex migrate:make create_critics_table
 npx knex migrate:make create_reviews_table
 npx knex migrate:make create_theaters_table
 npx knex migrate:make create_movies_theaters_table
+
+KNEX for running seeds and migrations.
+migrations first!
+npx knex migrate:latest
+and then
+npx knex seed:run

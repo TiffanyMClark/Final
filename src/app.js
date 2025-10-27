@@ -17,7 +17,7 @@ app.use("/reviews", reviewsRouter);
 
 // Not found handler
 app.use((req, res, next) => {
-  next({ status: 404, message: `Not found: ${req.originalUrl}` });
+  next({ status: 404, message: `IT'S ALIVE: ${req.originalUrl}` });
 });
 // error handler needed for testing?
 

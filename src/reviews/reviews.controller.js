@@ -11,13 +11,10 @@ async function reviewExists(req, res, next) {
     res.locals.review = review;
     return next();
   }
-  return next({
-    status: 404,
-    message: `Review cannot be found.`,
-  });
+  return next({ status: 404, message: "Review cannot be found." });
 }
-
-async function destroy(reqt, res) {
+// updating destroy function beacuse i put reqt... misspelling.
+async function destroy(req, res) {
   // TODO: Write your code here
   const { reviewId } = req.params;
   await service.delete(reviewId);

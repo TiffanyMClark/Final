@@ -15,9 +15,14 @@ app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
 
+//root foute.. that's silly but i need notes!
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is live!" });
+});
+
 // Not found handler
 app.use((req, res, next) => {
-  next({ status: 404, message: `IT'S ALIVE: ${req.originalUrl}` });
+  next({ status: 404, message: `Not found: ${req.originalUrl}` });
 });
 // error handler needed for testing?
 

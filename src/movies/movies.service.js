@@ -16,6 +16,12 @@ async function list(is_showing) {
       }
     });
 }
+async function update(movie_id, updatedMovie) {
+  return db("movies").where({ movie_id }).update(updatedMovie, "*");
+}
+async function destroy(movie_id) {
+  return db("movies").where({ movie_id }).del();
+}
 
 async function read(movie_id) {
   // TODO: Add your code here
@@ -25,4 +31,7 @@ async function read(movie_id) {
 module.exports = {
   list,
   read,
+
+  update,
+  destroy,
 };

@@ -19,6 +19,11 @@
     "test": "jest",
     "test:solution": "docker-compose build && docker-compose run --rm api npm test && docker-compose down"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -29,7 +34,8 @@
     "knex": "^0.21.12",
     "morgan": "^1.10.0",
     "pg": "^8.4.2",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "jest": "^26.6.3",

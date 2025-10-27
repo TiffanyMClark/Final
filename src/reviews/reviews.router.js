@@ -7,13 +7,13 @@ const methodNotAllowed = require("../errors/methodNotAllowed");
 router
   .route("/")
   .get(controller.list)
-  .post(controller.create)
+
   .all(methodNotAllowed);
 
 router
   .route("/:reviewId")
   .put(controller.update)
-  .delete(controller.delete)
+  .delete(controller.destroy)
   .all(methodNotAllowed);
 
 module.exports = router;

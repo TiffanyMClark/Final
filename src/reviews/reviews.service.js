@@ -45,6 +45,8 @@ module.exports = {
   destroy,
   list,
   read,
-  create,
+
   update,
+
+  delete: destroy,
 };

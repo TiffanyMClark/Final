@@ -14,6 +14,7 @@ const generateMoviesTheatersJoins = (movieIds, theaterIds) => {
 };
 
 exports.seed = async function (knex) {
+  await knex("movies_theaters").del();
   const movieIds = await knex("movies").select("movie_id");
   const theaterIds = await knex("theaters").select("theater_id");
 

@@ -40,6 +40,8 @@ npm i
 
 make you .env file
 
+npx knex migrate:rollback --all
+
 npx knex migrate:latest
 
 npx knex seed:run
@@ -47,3 +49,24 @@ npx knex seed:run
 npm run start:dev
 
 or npm run test
+
+Requirements are as follows...
+
+Are all tests passing in Qualified?
+
+The migrations can be correctly run and rolled back.
+
+The seed command can be run multiple times and work correctly.
+
+A response is included for Method Not Allowed.
+
+The cors package is included.
+
+The backend application is deployed and working.
+
+DB_HOST=dpg-d3rr2mvgi27c73faakfg-a
+DB_PORT=5432
+DB_USER=knex_tuzh_user
+DB_PASSWORD=0XK4kdVZkQiKG2OKvbKcpTAIrtyWHBrv
+DB_NAME=knex_tuzh
+DB_URL=PGPASSWORD=0XK4kdVZkQiKG2OKvbKcpTAIrtyWHBrv

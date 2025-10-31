@@ -63,10 +63,3 @@ A response is included for Method Not Allowed.
 The cors package is included.
 
 The backend application is deployed and working.
-
-DB_HOST=dpg-d3rr2mvgi27c73faakfg-a
-DB_PORT=5432
-DB_USER=knex_tuzh_user
-DB_PASSWORD=0XK4kdVZkQiKG2OKvbKcpTAIrtyWHBrv
-DB_NAME=knex_tuzh
-DB_URL=PGPASSWORD=0XK4kdVZkQiKG2OKvbKcpTAIrtyWHBrv

@@ -8,6 +8,7 @@ A RESTful backend API
 2. [Technologies Used](#technologies-used)
 3. [GitHub](#github)
 4. [Install](#install)
+5. [Notes](#notes)
 
 ## Overview
 
@@ -16,50 +17,50 @@ Deployed on Render as part of the Chegg Skills Capstone final project.
 
 ## Technologies Used
 
-Node.js + Express
+1. Node.js + Express
 
-Knex.js (SQL query builder)
+2. Knex.js (SQL query builder)
 
-PostgreSQL
+3. PostgreSQL
 
-Jest (testing)
+4. Jest (testing)
 
-Render (for deployment)
+5. Render (for deployment)
 
 ## Github
 
-https://github.com/TiffanyMClark/Final
+1. Github URL: https://github.com/TiffanyMClark/Final
 
-https://final-ny55.onrender.com
+2. Render URL: https://final-ny55.onrender.com
 
 ## Install
 
-clone the repo
+1. clone the repo
 
-npm i
+2. npm i
 
-make you .env file
+3. Create an .env file in the root with the following
 
-npx knex migrate:rollback --all
+DB_HOST=localhost
 
-npx knex migrate:latest
+DB_PORT=5432
 
-npx knex seed:run
+DB_USER=Your_PSQL_username
 
-npm run start:dev
+DB_PASSWORD=Your_PSQL_password
 
-or npm run test
+DB_NAME=postgres
 
-Requirements are as follows...
+4. npm run reset
 
-Are all tests passing in Qualified?
+5. npm run test
 
-The migrations can be correctly run and rolled back.
+6. npm run start
 
-The seed command can be run multiple times and work correctly.
+## Notes
 
-A response is included for Method Not Allowed.
+1. This project currently supports local PostgreSQL databases only.
 
-The cors package is included.
+2. Check that your local setup matches the configuration in the Knex file.
 
-The backend application is deployed and working.
+3. Render has limited functionality for executing Knex seed files, seeding must be performed locally prior to deployment.
